@@ -7,7 +7,7 @@ jobs:
 
     steps:
     - name: Mask fruit
-      uses: docker://plumming/chatops-actions:latest
+      uses: docker://plumming/chatops:latest
       with:
         fruit: banana
 
