@@ -1,0 +1,15 @@
+name: ChatOps
+on: [push]
+
+jobs:
+  my_job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Mask fruit
+      uses: plumming/chatops-actions@master
+      with:
+        fruit: banana
+
+    - name: Echo fruit
+      run: echo "apple, banana, and orange"
