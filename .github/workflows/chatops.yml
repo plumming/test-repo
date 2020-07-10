@@ -1,15 +1,14 @@
 name: ChatOps
-on: [push]
+on:
+  issue_comment:
+    types: [created]
 
 jobs:
   my_job:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Mask fruit
+    - name: ChatOps
       uses: docker://plumming/chatops:latest
       with:
-        fruit: banana
-
-    - name: Echo fruit
-      run: echo "apple, banana, and orange"
+        token: "${{ secrets.CHILLY_BOT_TOKEN }}"
