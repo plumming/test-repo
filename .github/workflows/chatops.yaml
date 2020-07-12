@@ -1,0 +1,14 @@
+name: ChatOps	
+on:	
+  issue_comment:	
+    types: [created]	
+
+jobs:	
+  my_job:	
+    runs-on: ubuntu-latest	
+
+    steps:	
+    - name: ChatOps	
+      uses: docker://plumming/chatops:latest	
+      with:	
+        token: "${{ secrets.CHILLY_BOT_TOKEN }}"
