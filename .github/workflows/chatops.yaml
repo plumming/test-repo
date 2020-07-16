@@ -9,6 +9,6 @@ jobs:
 
     steps:	
     - name: ChatOps	
-      uses: docker://plumming/chatops:latest	
+      uses: docker://cagiti/chatops:latest	
       with:	
         token: "${{ secrets.CHILLY_BOT_TOKEN }}"
